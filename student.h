@@ -1,5 +1,3 @@
-// student.h
-
 #pragma once
 #include "degree.h"
 
@@ -13,7 +11,7 @@ extern Student* initSec(string*);
 extern Student* initNet(string*);
 extern Student* initSof(string*);
 
-class Student /* base class*/
+class Student
 {
 public:
 	friend class NetworkStudent;
@@ -30,7 +28,6 @@ public:
 	Student();
 	Student(string[]);
 private:
-//protected:
 	string studentId;
 	string firstName;
 	string lastName;
@@ -40,9 +37,7 @@ private:
 	string numDays2;
 	string numDays3;
 	string degreeName;
-	//    virtual Degree degreeType;
 public:
-	//gets for each instance variable from Student
 	string getStudentId() { return studentId; }
 	string getFirstName() { return firstName; }
 	string getLastName() { return lastName; }
@@ -52,9 +47,7 @@ public:
 	string getNumDays2() { return numDays2; }
 	string getNumDays3() { return numDays3; }
 	string getDegreeName() { return degreeName; }
-	//	Degree getDegreeType() { return degreeType; }
 
-	//puts for each instance variable from Student
 	void putStudentId(string arg) { studentId = arg; }
 	void putFirstName(string arg) { firstName = arg; }
 	void putLastName(string arg) { lastName = arg; }
@@ -68,6 +61,6 @@ public:
 	virtual void print();
 	virtual void getDegreeProgram();
 
-	//destructor
+
 	~Student();
 };
