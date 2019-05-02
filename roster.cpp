@@ -1,4 +1,3 @@
-//C867 Project -- roster.cpp
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -9,14 +8,12 @@ using namespace std;
 #include "roster.h"
 
 extern string studentDataStrings[9];
-//Create an array of pointers, classRosterArray, to hold the data provided in the studentData table.
 std::vector<Roster*> classRosterArray;
 
 void Roster::remove(string arg) {
 	for (int i = 0; i < classRosterArray.size(); i++) {
 		Roster* p = classRosterArray[i];
 		if (p->getStudentId() != arg) { continue; }
-		//else student ID is found
 		p->~Roster();                   
 
 		classRosterArray.erase(classRosterArray.begin() + i); 
@@ -51,7 +48,7 @@ void Roster::print() {
 	cout << numDays1 << ", ";
 	cout << numDays2 << ", ";
 	cout << numDays3 << "} ";
-	cout << "Degree Program: " << degreeName << endl;  // prints as number
+	cout << "Degree Program: " << degreeName << endl; 
 }
 void Roster::printInvalidEmails() {
 	for (int i = 0; i < classRosterArray.size(); i++) {
