@@ -1,8 +1,5 @@
 #pragma once
 #include <string>
-//#include "securityStudent.h"
-//#include "networkStudent.h"
-//#include "softwareStudent.h"
 
 class Roster {
 	string studentID;
@@ -15,7 +12,6 @@ class Roster {
 	int numDays3;
 	Degree degreeName;
 public:
-	//gets for each instance variable from Student
 	string getStudentId() { return studentID; }
 	string getFirstName() { return firstName; }
 	string getLastName() { return lastName; }
@@ -25,7 +21,7 @@ public:
 	int getNumDays2() { return numDays2; }
 	int getNumDays3() { return numDays3; }
 	Degree getDegreeName() { return degreeName; }
-												  //puts for each instance variable from Student
+												  
 	void putStudentID(string arg) { studentID = arg; }
 	void putFirstName(string arg) { firstName = arg; }
 	void putLastName(string arg) { lastName = arg; }
